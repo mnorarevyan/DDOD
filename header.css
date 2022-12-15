@@ -10,9 +10,38 @@
     object-position: 50% 20%;
 }
 
+#ddod-intro-text {
+    color: white;
+    font-size: 24px;
+    max-width: 700px;
+    margin-top: 30px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+}
+
 #img-home-page {
     height: 100vh;
     object-position: 50% 70%;
+}
+
+#header-img-calendar {
+    object-position: 50% 40%;
+}
+
+#header-image-programs {
+    object-position: 50% 90%;
+}
+
+#header-img-visit {
+    object-position: 50% 50%;
+}
+
+#header-image-contact {
+    object-position: 50% 25%;
+}
+
+#header-image-donate {
+    object-position: 50% 40%;
 }
 
 #logo-container {
