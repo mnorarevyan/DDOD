@@ -10,6 +10,10 @@
     object-position: 50% 20%;
 }
 
+#landing-page-container {
+    height: 100vh
+}
+
 #ddod-intro-text {
     color: white;
     font-size: 24px;
