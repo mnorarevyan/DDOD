@@ -31,6 +31,13 @@
 @font-face {
     font-family: 'Poppins';
     src: url('fonts/poppins/Poppins-Light.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/poppins/Poppins-Regular.otf') format('opentype');
     font-weight: 300;
     font-style: normal;
 }
@@ -68,6 +75,7 @@
 :root {
     --colour-blue: #0047AB;
     --colour-yellow: #FFCA00;
+    --colour-white: #f1f5f9;
     --colour-50: #fafafa;
     --colour-100: #f4f4f5;
     --colour-200: #e4e4e7;
