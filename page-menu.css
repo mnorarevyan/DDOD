@@ -1,3 +1,7 @@
+#page-content {
+    display: flex;
+}
+
 #page-menu:hover {
     cursor: pointer;
 }
@@ -15,6 +19,14 @@
     color: black;
 }
 
-.active {
+.page-menu-item.active {
     color: black;
+}
+
+.content-option {
+    display: none;
+}
+
+.content-option.active {
+    display: block;
 }
