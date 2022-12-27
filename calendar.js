@@ -2,7 +2,7 @@ const today = new Date();
 let monthDisplayed = today.getMonth();
 let yearDisplayed = today.getFullYear();
 
-const numMonthsToDisplay = 3;
+const numMonthsToDisplay = 4;
 const validMonths = getValidMonths(today.getMonth(), numMonthsToDisplay);
 
 const prevMonthArrow = document.querySelector("#calendar-left-arrow");
