@@ -103,50 +103,57 @@ function fillInEvents() {
 
             const eventTimeShort = document.createElement("span");
             eventTimeShort.classList.add("event-time-short");
+            eventTimeShort.append(event.timeShort);
 
             const eventTimeFull = document.createElement("span");
             eventTimeFull.classList.add("event-time-full");
+            eventTimeFull.append(event.timeFull);
 
             const eventName = document.createElement("a");
-            eventName.classList.add("event-name");
+            eventName.classList.add("event-name", "link-to-programs", event.class);
+            eventName.append(event.name);
+            eventName.href = "programs.html";
 
             const eventNameFlyOut = document.createElement("a");
-            eventNameFlyOut.classList.add("event-name-fly-out");
+            eventNameFlyOut.classList.add("event-name-fly-out", "link-to-programs", event.class);
+            eventNameFlyOut.append(event.name);
+            eventNameFlyOut.href = "programs.html";
+
+            const allCalendarLinks = document.querySelectorAll(".link-to-programs");
+            for (let link of allCalendarLinks) {
+                link.addEventListener("click", () => {
+                    sessionStorage.setItem("dropdown-1", link.classList[2]);
+                });
+            }
 
             const eventFlyOut = document.createElement("div");
             eventFlyOut.classList.add("event-fly-out");
 
             const eventImg = document.createElement("img");
             eventImg.classList.add("event-img");
+            eventImg.src = event.imageSource;
 
             const eventTimeAndLink = document.createElement("div");
             eventTimeAndLink.classList.add("event-time-and-link");
 
             const eventRegLink = document.createElement("a");
             eventRegLink.classList.add("event-reg-link");
+            eventRegLink.href = event.regLink;
+            eventRegLink.target = "_blank";
+            eventRegLink.rel = "noopener noreferrer";
 
             const externalTabIcon = document.createElement("i");
             externalTabIcon.classList.add("fa-solid", "fa-arrow-up-right-from-square");
 
             const eventDesc = document.createElement("p");
             eventDesc.classList.add("event-desc");
+            eventDesc.append(event.desc);
 
             dateContent.append(eventContainer);
             eventContainer.append(eventTimeShort, eventName, eventFlyOut);
             eventTimeAndLink.append(eventTimeFull, eventRegLink);
             eventRegLink.append("Sign Up", externalTabIcon);
             eventFlyOut.append(eventImg, eventNameFlyOut, eventTimeAndLink, eventDesc);
-
-            eventTimeShort.append(event.timeShort);
-            eventTimeFull.append(event.timeFull);
-            eventName.append(event.name);
-            eventNameFlyOut.append(event.name);
-            eventDesc.append(event.desc);
-            eventImg.src = event.imageSource;
-            eventRegLink.href = event.regLink;
-            eventRegLink.target = "_blank";
-            eventRegLink.rel = "noopener noreferrer";
-
         }
     }
 }

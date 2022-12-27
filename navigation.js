@@ -22,7 +22,6 @@ for (let link of dropdownItemLinks) {
     link.addEventListener("click", () => {
         // Remember which dropdown option the user selected for this dropdown
         sessionStorage.setItem("dropdown-1", link.classList[2]);
-
     });
 }
 
@@ -42,5 +41,4 @@ if (sessionStorage.getItem("dropdown-1")) {
 
     sessionStorage.removeItem("dropdown-1");
 }
-
 
