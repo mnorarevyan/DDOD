@@ -17,6 +17,7 @@ const calendarEvents = [
         desc: "Do you have a telescope at home and are in need of some guidance on how to use it? Bring your telescope to this workshop to have it assessed and to receive one on one instruction on its use outdoors as weather permits (indoors otherwise). Maximum two people and one telescope per registration. Participants under the age of 16 must be accompanied by a registered adult."
     },
     {
+        class: "dropdown-1-1",
         date: new Date(2023, 0, 14),
         timeShort: "7pm",
         timeFull: "7:00pm - 8:30pm",
@@ -26,6 +27,7 @@ const calendarEvents = [
         desc: "Join us, from the comfort of your home! This program will feature live-stream views from the DDO's 74-Inch telescope (Weather permitting). Explore breaking news from space and current research into what lies beyond our home planet! Each night, we’ll take a virtual tour of the DDO, hear from our speakers about their own amazing space research, and ask them all our questions about what they know and what they’re discovering. Only one registration per household is required. Deadline to register for this program is Wednesday January 11, 2023 at 4pm. Prior to the start of the program you will be emailed information on the virtual program links and any specific information relating to your program."
     },
     {
+        class: "dropdown-1-4",
         date: new Date(2023, 0, 18),
         timeShort: "7pm",
         timeFull: "7:00pm - 9:00pm",
@@ -45,6 +47,7 @@ const calendarEvents = [
         desc: "Do you have a telescope at home and are in need of some guidance on how to use it? Bring your telescope to this workshop to have it assessed and to receive one on one instruction on its use outdoors as weather permits (indoors otherwise). Maximum two people and one telescope per registration. Participants under the age of 16 must be accompanied by a registered adult."
     },
     {
+        class: "dropdown-1-1",
         date: new Date(2023, 1, 18),
         timeShort: "7pm",
         timeFull: "7:00pm - 8:30pm",

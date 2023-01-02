@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programs - David Dunlop Observatory Defenders</title>
     <script src="https://kit.fontawesome.com/15cf252415.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="navigation.css">
     <link rel="stylesheet" href="header.css">
@@ -16,103 +18,415 @@
 
 <body>
 
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="navbar-nav mr-auto">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="calendar.html" class="nav-item nav-link">Calendar</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="programs.html" id="navbarDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Programs
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item dropdown-1 dropdown-1-1" href="programs.html">Speaker Nights</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item dropdown-1 dropdown-1-2" href="programs.html">Family Nights</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item dropdown-1 dropdown-1-3" href="programs.html">How to Use Your
+                                    Telescope</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item dropdown-1 dropdown-1-4" href="programs.html">Workshops</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item dropdown-1 dropdown-1-5" href="programs.html">Up in the Sky</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item dropdown-1 dropdown-1-6" href="programs.html">Group Bookings</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="about.html" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            About Us
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item dropdown-2 dropdown-2-1" href="about.html">Who Are We?</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item dropdown-2 dropdown-2-2" href="about.html">History of the
+                                    DDO</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item dropdown-2 dropdown-2-3" href="about.html">Activism</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item dropdown-2 dropdown-2-4" href="about.html">Looking to the
+                                    Future</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <a href="visit.html" class="nav-item nav-link">Visit</a>
+                    <a class="nav-item nav-link" href="https://www.facebook.com/groups/saveddo/" target="_blank"
+                        rel="noopener noreferrer"><i class="fa-brands fa-square-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <div class="header-and-image-container">
         <img id="header-image-programs" class="header-image"
-            src="https://live.staticflickr.com/65535/48614657931_8caac90ed3_k.jpg" width="2048" height="1367"
-            alt="EAE_5337r">
+            src="https://live.staticflickr.com/65535/47979319577_593f6287d9_k.jpg" width="2048" height="1367"
+            alt="EAB_3935r">
         <div id="logo-container">
             <a href="index.html"><img id="logo" src="images/logo.png" alt=""></a>
         </div>
-        <nav role="navigation">
-            <ul id="navbar">
-                <li class="nav-item"><a class="nav-link" href="calendar.html">Calendar</a></li>
-                <li class="nav-item">
-                    <a class="nav-link" href="programs.html">Programs<i class="fa-solid fa-angle-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-item">
-                            <a class="dropdown-item-link dropdown-1 dropdown-1-1" href="programs.html">Speaker
-                                Nights</a>
-                        </li>
-                        <li class="dropdown-item">
-                            <a class="dropdown-item-link dropdown-1 dropdown-1-2" href="programs.html">Family Nights</a>
-                        </li>
-                        <li class="dropdown-item">
-                            <a class="dropdown-item-link dropdown-1 dropdown-1-3" href="programs.html">How to Use Your
-                                Telescope</a>
-                        </li>
-                        <li class="dropdown-item">
-                            <a class="dropdown-item-link dropdown-1 dropdown-1-4" href="programs.html">Up in the Sky</a>
-                        </li>
-                        <li class="dropdown-item">
-                            <a class="dropdown-item-link dropdown-1 dropdown-1-5" href="programs.html">Group Tours</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About<i class="fa-solid fa-angle-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-item"><a class="dropdown-item-link" href="#">About the DDOD</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item-link" href="#">History of the DDO</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item-link" href="#">Activism</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="visit.html">Visit</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                <li class="nav-item">
-                    <a class="nav-link" href="resources.html">Resources<i class="fa-solid fa-angle-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-item"><a class="dropdown-item-link" href="#">Star Chart</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item-link" href="#">Telescopes</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item-link" href="#">Cameras and Lenses</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="donate.html">Donate</a></li>
-                <li class="nav-item">
-                    <a class="nav-link social-media-icon" href="https://www.facebook.com/groups/saveddo/"
-                        target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-facebook fa-xs"></i></a>
-                    <a class="nav-link social-media-icon" href="https://www.facebook.com/groups/saveddo/"
-                        target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram fa-xs"></i></a>
-                </li>
-            </ul>
-        </nav>
         <div id="h1-container">
             <h1>Programs</h1>
         </div>
     </div>
 
-    <main id="page-content">
-        <ul id="page-menu">
-            <li class="page-menu-item dropdown-1-1 active">Speaker Nights</li>
-            <li class="page-menu-item dropdown-1-2">Family Nights</li>
-            <li class="page-menu-item dropdown-1-3">How to Use Your Telescope</li>
-            <li class="page-menu-item dropdown-1-4">Up in the Sky</li>
-            <li class="page-menu-item dropdown-1-5">Group Tours</li>
-        </ul>
+    <main class="container my-3 my-md-5">
+        <div class="row justify-content-center">
 
+            <ul id="page-menu" class="col-md-3">
+                <li class="page-menu-item dropdown-1-1 active">Speaker Nights</li>
+                <li class="page-menu-item dropdown-1-2">Family Nights</li>
+                <li class="page-menu-item dropdown-1-3">How to Use Your Telescope</li>
+                <li class="page-menu-item dropdown-1-4">Workshops</li>
+                <li class="page-menu-item dropdown-1-5">Up in the Sky</li>
+                <li class="page-menu-item dropdown-1-6">Group Bookings</li>
+            </ul>
 
-        <div class="content-option dropdown-1-1 active">
-            <h2>Speaker Nights</h2>
-        </div>
+            <div class="col-md-7">
+                <div class="content-option dropdown-1-1 active">
+                    <h2>Speaker Nights</h2>
+                    <p>Evenings begin with a 40-minute illustrated presentation within the Administration building on a
+                        variety of exciting
+                        astronomy topics and the history of the facility. Following the presentation, the 74” telescope
+                        will be demonstrated. If
+                        the sky is clear, the dome will be opened and the telescope pointed to an interesting celestial
+                        object for the visitors
+                        to view. Although the sky is not always clear enough for viewing, programs run regardless of the
+                        weather (i.e. - a talk
+                        and demonstration of the 74” telescope are always provided). On clear nights, smaller telescopes
+                        may be available for
+                        celestial viewing; on cloudy nights, Visitors can attend a second presentation in our SkyLab for
+                        a simulation and
+                        discussion about the current nighttime sky. </p>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>Saturday, January 14th (Virtual)</td>
+                                <td>
+                                    <a href="https://anc.ca.apm.activecommunities.com/richmondhill/activity/search/detail/81492?onlineSiteId=0&from_original_cui=true"
+                                        target=" _blank" rel="noopener noreferrer"
+                                        class="btn btn-sm .btn-outline-* btn-outline-primary" role="button">Sign Up</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Saturday, February 18th (Virtual)</td>
+                                <td>
+                                    <a href="https://anc.ca.apm.activecommunities.com/richmondhill/activity/search/detail/81507?onlineSiteId=0&from_original_cui=true"
+                                        target=" _blank" rel="noopener noreferrer"
+                                        class="btn btn-sm .btn-outline-* btn-outline-primary" role="button">Sign Up</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div id="carousel1" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carousel1" data-bs-slide-to="0" class="active"
+                                aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carousel1" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carousel1" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carousel1" data-bs-slide-to="3"
+                                aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carousel1" data-bs-slide-to="4"
+                                aria-label="Slide 5"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://live.staticflickr.com/65535/52138379526_908b06b4cd_c.jpg"
+                                    class="d-block w-100" alt="EAR_1146r">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://live.staticflickr.com/65535/51947738038_6c378d54bd_c.jpg"
+                                    class="d-block w-100" alt="EAP_5953r">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://live.staticflickr.com/65535/52138381001_a12a05311d_c.jpg"
+                                    class="d-block w-100" alt="EAR_1132r2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://live.staticflickr.com/65535/48222639811_ab71e6f5c6_c.jpg"
+                                    class="d-block w-100" alt="EAC_6390r">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://live.staticflickr.com/65535/52138865320_f734541020_c.jpg"
+                                    class="d-block w-100" alt="EAR_1155r">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel1"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel1"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
 
-        <div class="content-option dropdown-1-2">
-            <h2>Family Nights</h2>
-        </div>
+                <div class="content-option dropdown-1-2">
+                    <h2>Family Nights</h2>
+                    <p>These evenings are intended for families with school-age children. The program provides an
+                        age-appropriate talk where we
+                        invite questions and audience participation to learn about exciting discoveries and celestial
+                        events.
+                        The talk is
+                        followed by a demonstration of the 74” telescope with viewing through this and other smaller
+                        telescopes
+                        as weather
+                        permits, craft activities & a simulation of the nighttime sky in our SkyLab.
+                        <hr>
+                        We will update this page with dates and times for each course, as well as direct links for
+                        registration, once they become available.
+                    </p>
+                    <div id="carousel2" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carousel2" data-bs-slide-to="0" class="active"
+                                aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carousel2" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carousel2" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://live.staticflickr.com/65535/48970645281_ed5b72a992_k.jpg"
+                                    class="d-block w-100" alt="EAF_6340r">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://live.staticflickr.com/65535/52137355857_dd524f3cd3_k.jpg"
+                                    class="d-block w-100" alt="EAR_1140r">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://live.staticflickr.com/65535/52151149746_36f4325071_k.jpg"
+                                    class="d-block w-100" alt="EAR_1923r">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel2"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel2"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
 
-        <div class="content-option dropdown-1-3">
-            <h2>How to Use Your Telescope</h2>
-        </div>
+                <div class="content-option dropdown-1-3">
+                    <h2>How to Use Your Telescope</h2>
+                    <div class="upcoming-events dropdown-1-3"></div>
+                    <p>If you have a telescope and need some guidance on how to use it, we can help! Participants get
+                        one-on-one
+                        instruction on
+                        how to use their telescope by experts in the field of astronomy.
+                    </p>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>Saturday, January 7th</td>
+                                <td>
+                                    <a href="https://anc.ca.apm.activecommunities.com/richmondhill/activity/search/detail/81472?onlineSiteId=0&from_original_cui=true"
+                                        target=" _blank" rel="noopener noreferrer"
+                                        class="btn btn-sm .btn-outline-* btn-outline-primary" role="button">Sign Up</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Friday, February 3rd</td>
+                                <td>
+                                    <a href="https://anc.ca.apm.activecommunities.com/richmondhill/activity/search/detail/81950?onlineSiteId=0&from_original_cui=true"
+                                        target=" _blank" rel="noopener noreferrer"
+                                        class="btn btn-sm .btn-outline-* btn-outline-primary" role="button">Sign Up</a>
+                                </td>
+                            <tr>
+                                <td>Saturday, March 4th</td>
+                                <td>
+                                    <a href="https://anc.ca.apm.activecommunities.com/richmondhill/activity/search/detail/81497?onlineSiteId=0&from_original_cui=true"
+                                        target=" _blank" rel="noopener noreferrer"
+                                        class="btn btn-sm .btn-outline-* btn-outline-primary" role="button">Sign Up</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div id="carousel3" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carousel3" data-bs-slide-to="0" class="active"
+                                aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carousel3" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carousel3" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carousel3" data-bs-slide-to="3"
+                                aria-label="Slide 4"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://live.staticflickr.com/65535/51937983883_36674629a7_k.jpg"
+                                    class="d-block w-100" alt="EAP_4575r">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://live.staticflickr.com/65535/52432849229_eb9c410f6c_k.jpg"
+                                    class="d-block w-100" alt="EAV_0764r">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://live.staticflickr.com/65535/51938226579_a801395299_k.jpg"
+                                    class="d-block w-100" alt="EAP_4581r">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://live.staticflickr.com/65535/51937907811_4cfc983720_k.jpg"
+                                    class="d-block w-100" alt="EAP_4589r">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel3"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel3"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
 
-        <div class="content-option dropdown-1-4">
-            <h2>Up in the Sky</h2>
-        </div>
+                <div class="content-option dropdown-1-4">
+                    <h2>Workshops</h2>
+                    <h3>Intro to Astronomy</h3>
+                    <p>Explore the wonders and mysteries of the nighttime sky. What is the Milky Way? What are stars
+                        made of? How did the Earth and Moon form? Why do we believe the Universe began in a "Big Bang"?
+                        We will discuss these and other topics, as well as the underlying laws of nature and the tools
+                        we use to explore the universe. Join us on this four-week journey of cosmic discovery, every
+                        Wednesday from Jan 18 to Feb 8! No prior knowledge of Astronomy is required.
+                        All concepts and theories will be explained and your questions answered in simple language by
+                        our professional astronomers. A registered adult must accompany all registered participants
+                        under the age of 16.</p>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>Wednesday, January 18th</td>
+                                <td>
+                                    <a href="https://anc.ca.apm.activecommunities.com/richmondhill/activity/search/detail/81499?onlineSiteId=0&from_original_cui=true"
+                                        target=" _blank" rel="noopener noreferrer"
+                                        class="btn btn-sm .btn-outline-* btn-outline-primary" role="button">Sign Up</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div id="carousel4" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carousel4" data-bs-slide-to="0" class="active"
+                                aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carousel4" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://live.staticflickr.com/65535/48953931891_41cb957e63_k.jpg"
+                                    class="d-block w-100" alt="EAF_6258r">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://live.staticflickr.com/65535/51720605450_afac8c79e9_k.jpg"
+                                    class="d-block w-100" alt="EAO_8621r">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel4"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel4"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
 
-        <div class="content-option dropdown-1-5">
-            <h2>Group Tours</h2>
+                <div class="content-option dropdown-1-5">
+                    <h2>Up in the Sky</h2>
+                    <p>This program provides an illustrated one-hour presentation and discussion about what exciting
+                        celestial events to look for during the season. The events and phenomena will be explained using
+                        simple language, with recommendations about how best to observe and photograph them.
+                        <hr>
+                        We will update this page with dates and times for each course, as well as direct links for
+                        registration, once they become available.
+                    </p>
+                    <img class="img-fluid" src="https://live.staticflickr.com/65535/48954138667_cfba159743_c.jpg"
+                        alt="EAF_6234r">
+                </div>
+
+                <div class="content-option dropdown-1-6">
+                    <h2>Group Bookings</h2>
+                    <h3>Youth Service Groups (Guides, etc.)</h3>
+                    <p>This evening program is primarily intended for youth service groups wishing to satisfy
+                        age-appropriate merit badge
+                        requirements for Astronomy, Space Science or other Astronomy-related outdoor components.
+                        Participants learn about
+                        astronomy and space exploration and will be taught to find their way around the nighttime sky.
+                        The program includes a
+                        visit to see and learn about the 74” telescope. This program supports requirements for Science
+                        as laid out in the
+                        Ontario Schools Curriculum. Participants leave with a craft project as appropriate for their age
+                        group.
+                    </p>
+                    <h3>School Groups</h3>
+                    <p>This daytime program is offered most weekdays, consisting of an illustrated talk and discussion,
+                        and a demonstration of
+                        the 74” telescope. This program is designed to meet Grade 3, 6 and 9 Ontario Curriculum
+                        requirements for Earth and
+                        Space, Science, and Astronomy units at those grade levels in both the academic and applied
+                        streams. The Program can be
+                        tailored to other grade levels and specific content.
+                    </p>
+                    <h3>Private Bookings</h3>
+                    <p>This program is intended for community groups interested in learning about the Observatory's
+                        history & research
+                        highlights and can include a discussion about recent celestial events and discoveries, all
+                        explained in simple language.
+                    </p>
+                    <hr>
+                    <p>To book any one of these programs, please use the
+                        <a href="https://forms.richmondhill.ca/Community-Services/RHDDO-Group-Booking-Request-Form"
+                            target="_blank" rel="noopener noreferrer">
+                            online DDO group booking request form</a>, provided by the City of Richmond Hill.
+                    </p>
+                </div>
+            </div>
         </div>
     </main>
-
-
 
     <footer>
         <div class="footer-newsletter">
@@ -130,6 +444,15 @@
     </footer>
 
     <script src="navigation.js"></script>
+    <script src="calendar-events.js"></script>
+    <script src="programs.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
