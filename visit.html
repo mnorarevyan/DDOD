@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visit - David Dunlop Observatory Defenders</title>
-    <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
     <script src="https://kit.fontawesome.com/15cf252415.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="navigation.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="visit.css">
     <link rel="stylesheet" href="footer.css">
@@ -16,106 +18,135 @@
 
 <body>
 
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="navbar-nav mr-auto">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="calendar.html" class="nav-item nav-link">Calendar</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="programs.html" id="navbarDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Programs
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item dropdown-1 dropdown-1-1" href="programs.html">Speaker Nights</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item dropdown-1 dropdown-1-2" href="programs.html">Family Nights</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item dropdown-1 dropdown-1-3" href="programs.html">How to Use Your
+                                    Telescope</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item dropdown-1 dropdown-1-4" href="programs.html">Workshops</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item dropdown-1 dropdown-1-5" href="programs.html">Up in the Sky</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item dropdown-1 dropdown-1-6" href="programs.html">Group Bookings</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="about.html" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            About Us
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item dropdown-2 dropdown-2-1" href="about.html">Who Are We?</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item dropdown-2 dropdown-2-2" href="about.html">History of the
+                                    DDO</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item dropdown-2 dropdown-2-3" href="about.html">Activism</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item dropdown-2 dropdown-2-4" href="about.html">Looking to the
+                                    Future</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <a href="faq.html" class="nav-item nav-link">FAQ</a>
+                    <a href="visit.html" class="nav-item nav-link">Visit</a>
+                    <a class="nav-item nav-link" href="https://www.facebook.com/groups/saveddo/" target="_blank"
+                        rel="noopener noreferrer"><i class="fa-brands fa-square-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <div class="header-and-image-container">
         <img id="header-img-visit" class="header-image"
-            src="https://live.staticflickr.com/65535/52138403443_a6e46c3d6a_k.jpg" width="2048" height="1367"
-            alt="EAR_1151r">
-        <a href="index.html"><img id="logo" src="images/logo.png" alt=""></a>
-        <nav role="navigation">
-            <ul id="navbar">
-                <li class="nav-item"><a class="nav-link" href="calendar.html">Calendar</a></li>
-                <li class="nav-item">
-                    <a class="nav-link" href="programs.html">Programs<i class="fa-solid fa-angle-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-item"><a class="dropdown-item-link" href="#">Speaker Nights</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item-link" href="#">Family Nights</a></li>
-                        <li class="dropdown-item">
-                            <a class="dropdown-item-link" href="#">How to Use Your Telescope</a>
-                        </li>
-                        <li class="dropdown-item"><a class="dropdown-item-link" href="#">Up in the Sky</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item-link" href="#">Group Tours</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                <li class="nav-item">
-                    <a class="nav-link" href="aboutus.html">About<i class="fa-solid fa-angle-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-item"><a class="dropdown-item-link" href="#">About the DDOD</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item-link" href="#">History of the DDO</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item-link" href="#">Activism</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="visit.html">Visit</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                <li class="nav-item">
-                    <a class="nav-link" href="resources.html">Resources<i class="fa-solid fa-angle-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-item"><a class="dropdown-item-link" href="#">Star Chart</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item-link" href="#">Telescopes</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item-link" href="#">Cameras and Lenses</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="">Donate</a></li>
-                <li class="nav-item">
-                    <a class="nav-link social-media-icon" href="https://www.facebook.com/groups/saveddo/"
-                        target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-facebook fa-xs"></i></a>
-                    <a class="nav-link social-media-icon" href="https://www.facebook.com/groups/saveddo/"
-                        target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram fa-xs"></i></a>
-                </li>
-            </ul>
-        </nav>
+            src="https://live.staticflickr.com/65535/52433107058_69f564254f_k.jpg" width="2048" height="1367"
+            alt="EAV_0678r">
+        <div id="logo-container">
+            <a href="index.html"><img id="logo" src="images/logo.png" alt=""></a>
+        </div>
         <div id="h1-container">
             <h1>Visit</h1>
         </div>
     </div>
 
-
-
-
-    <main id="page-content">
-        <div id="visit-info">
-            <div class="visit-info-item">
-                <h2>Address</h2>
-                <p>123 Hillsview Dr, <br>Richmond Hill, ON L4C 1T3</p>
+    <main class="faq container my-3 my-md-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="visit-info-item">
+                    <h2>Address</h2>
+                    <p><b>123 Hillsview Dr, <br>Richmond Hill, ON L4C 1T3</b></p>
+                </div>
+                <div class="visit-info-item">
+                    <h2>Directions</h2>
+                    <p>From Bayview Avenue in Richmond Hill, turn on to Hillsview Drive (across from Bruno Fine Foods).
+                        Continue until nearing
+                        the end of the Drive. Turn on to the laneway marked with the David Dunlap Observatory Park sign.
+                        Continuing straight
+                        down this laneway will bring you to the car park of the DDO. From here there are walking paths
+                        to access the Park
+                        features.
+                    </p>
+                </div>
+                <div class="visit-info-item">
+                    <h2>Accessibility Info</h2>
+                    <p>The David Dunlap Observatory Park does not have sidewalks alongside drives and laneways. Please
+                        use caution when
+                        walking in limited light, inclement weather and colder seasons. The Administration Building and
+                        the Dome have stair
+                        access to reach their entranceways, and stairways to access upper and lower levels. No elevators
+                        or ramps are present in
+                        these buildings. Washrooms are located only on upper and lower levels. The Dome is regarded as
+                        an industrial setting,
+                        please wear close-toed shoes. Exercise caution and respect when visiting the DDO.
+                    </p>
+                </div>
             </div>
-            <div class="visit-info-item">
-                <h2>Directions</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non distinctio, minima architecto minus id
-                    magni autem eligendi veniam placeat voluptates nam quas qui, ab sed laborum doloremque atque. Quasi,
-                    blanditiis.</p>
+            <div class="col-md-8">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2876.6952238970007!2d-79.4209384939743!3d43.86214535064335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b2b09a0df075b%3A0xf1e8e06b0bb2e361!2sThe%20David%20Dunlap%20Observatory%20Park!5e0!3m2!1sen!2sca!4v1666577382039!5m2!1sen!2sca"
+                    id="google-map" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
-            <div class="visit-info-item">
-                <h2>Accessibility Info</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non distinctio, minima architecto minus id
-                    magni autem eligendi veniam placeat voluptates nam quas qui, ab sed laborum doloremque atque. Quasi,
-                    blanditiis.</p>
-            </div>
-        </div>
-        <div id="google-map-container">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2876.6952238970007!2d-79.4209384939743!3d43.86214535064335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b2b09a0df075b%3A0xf1e8e06b0bb2e361!2sThe%20David%20Dunlap%20Observatory%20Park!5e0!3m2!1sen!2sca!4v1666577382039!5m2!1sen!2sca"
-                id="google-map" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
         </div>
     </main>
 
 
-    <footer>
-        <div class="footer-newsletter">
-            <h4>Newsletter</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ad, delectus eum voluptatem architecto
-                quaerat. Neque perspiciatis officiis, facere nam, similique sint ipsa sit iusto unde maxime laborum.
-                Non, voluptas!</p>
-            <form action="">
-                <input type="email" name="email" id="footer-newsletter-input-text" placeholder="Email Address">
-                <button type="submit">SUBMIT</button>
-            </form>
-
-        </div>
-
-    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
 
 </body>
 
