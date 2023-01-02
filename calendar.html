@@ -7,14 +7,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendar - David Dunlop Observatory Defenders</title>
     <script src="https://kit.fontawesome.com/15cf252415.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="navigation.css">
     <link rel="stylesheet" href="calendar.css">
     <link rel="stylesheet" href="footer.css">
 
 </head>
 
 <body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="navbar-nav mr-auto">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="calendar.html" class="nav-item nav-link">Calendar</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="programs.html" id="navbarDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Programs
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item dropdown-1 dropdown-1-1" href="programs.html">Speaker Nights</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item dropdown-1 dropdown-1-2" href="programs.html">Family Nights</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item dropdown-1 dropdown-1-3" href="programs.html">How to Use Your
+                                    Telescope</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item dropdown-1 dropdown-1-4" href="programs.html">Workshops</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item dropdown-1 dropdown-1-5" href="programs.html">Up in the Sky</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item dropdown-1 dropdown-1-6" href="programs.html">Group Bookings</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="about.html" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            About Us
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item dropdown-2 dropdown-2-1" href="about.html">Who Are We?</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item dropdown-2 dropdown-2-2" href="about.html">History of the
+                                    DDO</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item dropdown-2 dropdown-2-3" href="about.html">Activism</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item dropdown-2 dropdown-2-4" href="about.html">Looking to the
+                                    Future</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <a href="faq.html" class="nav-item nav-link">FAQ</a>
+                    <a href="visit.html" class="nav-item nav-link">Visit</a>
+                    <a class="nav-item nav-link" href="https://www.facebook.com/groups/saveddo/" target="_blank"
+                        rel="noopener noreferrer"><i class="fa-brands fa-square-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <div class="header-and-image-container">
         <img id="header-img-calendar" class="header-image"
             src="https://live.staticflickr.com/65535/52432066912_3e29de2d43_k.jpg" width="2048" height="1365"
@@ -22,67 +94,15 @@
         <div id="logo-container">
             <a href="index.html"><img id="logo" src="images/logo.png" alt=""></a>
         </div>
-        <nav role="navigation">
-            <ul id="navbar">
-                <li class="nav-item"><a class="nav-link underline" href="calendar.html">Calendar</a></li>
-                <li class="nav-item">
-                    <a class="nav-link" href="programs.html">Programs<i class="fa-solid fa-angle-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-item">
-                            <a class="dropdown-item-link dropdown-1 dropdown-1-1" href="programs.html">Speaker
-                                Nights</a>
-                        </li>
-                        <li class="dropdown-item">
-                            <a class="dropdown-item-link dropdown-1 dropdown-1-2" href="programs.html">Family Nights</a>
-                        </li>
-                        <li class="dropdown-item">
-                            <a class="dropdown-item-link dropdown-1 dropdown-1-3" href="programs.html">How to Use Your
-                                Telescope</a>
-                        </li>
-                        <li class="dropdown-item">
-                            <a class="dropdown-item-link dropdown-1 dropdown-1-4" href="programs.html">Up in the Sky</a>
-                        </li>
-                        <li class="dropdown-item">
-                            <a class="dropdown-item-link dropdown-1 dropdown-1-5" href="programs.html">Group Tours</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link underline" href="blog.html">Blog</a></li>
-                <li class="nav-item">
-                    <a class="nav-link underline" href="aboutus.html">About<i class="fa-solid fa-angle-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-item"><a class="dropdown-item-link" href="#">About the DDOD</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item-link" href="#">History of the DDO</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item-link" href="#">Activism</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link underline" href="visit.html">Visit</a></li>
-                <li class="nav-item"><a class="nav-link underline" href="contact.html">Contact</a></li>
-                <li class="nav-item">
-                    <a class="nav-link underline" href="resources.html">Resources<i
-                            class="fa-solid fa-angle-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-item"><a class="dropdown-item-link" href="#">Star Chart</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item-link" href="#">Telescopes</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item-link" href="#">Cameras and Lenses</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link underline" href="">Donate</a></li>
-                <li id="social-media-icons" class="nav-item">
-                    <a class="nav-link" href="https://www.facebook.com/groups/saveddo/" target="_blank"
-                        rel="noopener noreferrer"><i class="fa-brands fa-square-facebook"></i></a>
-                    <a class="nav-link" href="https://www.facebook.com/groups/saveddo/" target="_blank"
-                        rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
-                </li>
-            </ul>
-        </nav>
-        <div id="h1-container">
-            <h1>Calendar</h1>
+        <div id="h1-container" class="container">
+            <div class="row justify-content-center">
+                <h1 class="col-sm-10 col-lg-9 col-xl-7">Calendar</h1>
+            </div>
         </div>
     </div>
 
 
-    <main id="page-content">
+    <main class="container my-3 my-md-5">
         <div id="calendar-header">
             <div id="calendar-month"></div>
             <div id="calendar-arrows">
@@ -120,24 +140,36 @@
         </div>
     </main>
 
-    <footer>
-        <div class="footer-newsletter">
-            <h4>Newsletter</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit ad, delectus eum voluptatem architecto
-                quaerat. Neque perspiciatis officiis, facere nam, similique sint ipsa sit iusto unde maxime laborum.
-                Non, voluptas!</p>
-            <form action="">
-                <input type="email" name="email" id="footer-newsletter-input-text" placeholder="Email Address">
-                <button type="submit">SUBMIT</button>
-            </form>
-
+    <footer class="container-fluid py-4">
+        <div class="row gx-4 align-items-center justify-content-center">
+            <div class="col-sm-auto">
+                <h4 class="mt-2">Visit</h4>
+                <span>123 Hillsview Dr, <br>Richmond Hill, ON L4C 1T3</span>
+            </div>
+            <div class="col-sm-auto">
+                <h4 class="mt-2">Contact</h4>
+                <span>Message us on <a href="https://www.facebook.com/groups/saveddo/" target="_blank"
+                        rel="noopener noreferrer"><i class="fa-brands fa-square-facebook"></i></a>
+                </span>
+                <br>
+                <span>Email us at ddod [@] gmail.com</span>
+            </div>
         </div>
-
+        <div class="row mt-4 justify-content-center">
+            <span class="col-auto">Photos courtesy of <a href="https://www.flickr.com/photos/crobart/" target="_blank"
+                    rel="noopener noreferrer">Chris Robart</a></span>
+        </div>
     </footer>
 
     <script src="calendar-events.js"></script>
     <script src="calendar.js"></script>
     <script src="navigation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
 
 </body>
 

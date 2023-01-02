@@ -105,7 +105,7 @@ function fillInEvents() {
             eventTimeShort.classList.add("event-time-short");
             eventTimeShort.append(event.timeShort);
 
-            const eventTimeFull = document.createElement("span");
+            const eventTimeFull = document.createElement("mark");
             eventTimeFull.classList.add("event-time-full");
             eventTimeFull.append(event.timeFull);
 
@@ -137,7 +137,7 @@ function fillInEvents() {
             eventTimeAndLink.classList.add("event-time-and-link");
 
             const eventRegLink = document.createElement("a");
-            eventRegLink.classList.add("event-reg-link");
+            eventRegLink.classList.add("event-reg-link", "btn", "btn-primary", "btn-sm");
             eventRegLink.href = event.regLink;
             eventRegLink.target = "_blank";
             eventRegLink.rel = "noopener noreferrer";
