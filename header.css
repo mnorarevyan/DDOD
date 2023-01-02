@@ -70,19 +70,18 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 100%;
 }
 
 h1 {
     color: var(--colour-yellow);
-    font-size: 80px;
+    font-size: 60px;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-style: italic;
     line-height: 1em;
     box-sizing: border-box;
-    width: auto;
+    /* width: auto;
     margin: auto;
     max-width: 1220px;
-    padding: 0 32px;
+    padding: 0 32px; */
 }

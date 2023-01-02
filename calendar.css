@@ -120,6 +120,7 @@ td {
 }
 
 .event-name {
+    color: black;
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     font-weight: 400;
@@ -132,27 +133,24 @@ td {
 
 .event-img {
     width: 100%;
+    height: auto;
 }
 
 .event-reg-link {
-    background-color: var(--colour-blue);
-    border-radius: 10%;
-    padding: 2px 4px;
-    color: white;
-    text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
-    font-size: 12px;
+    /* background-color: var(--colour-blue);
+    font-family: 'Poppins', sans-serif; */
+    margin-left: 4px;
 }
 
 .fa-arrow-up-right-from-square {
-    font-size: 0.8em;
     margin-left: 4px;
 }
 
 .event-name-fly-out {
     font-family: 'Poppins', sans-serif;
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 300;
+    color: var(--colour-blue);
 }
 
 .event-name-fly-out:hover {
@@ -164,4 +162,61 @@ td {
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     font-weight: 300;
+}
+
+
+.close-icon-container {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .event-name {
+        display: none;
+    }
+
+    .event-time-short {
+        font-size: 12px;
+        font-weight: 600;
+        padding-right: 5px;
+        text-decoration: underline;
+        text-align: center;
+    }
+
+    .event-container {
+        text-align: center;
+    }
+
+    .event-fly-out {
+
+        width: 450%;
+        left: -200%;
+        height: auto;
+    }
+
+    .event-name-fly-out {
+        font-size: 14px;
+    }
+
+    .event-desc {
+        font-size: 10px;
+    }
+
+    .event-time-full {
+        font-size: 10px;
+        display: inline;
+    }
+
+    .event-reg-link {
+        font-size: 8px;
+        display: inline;
+    }
+
+    .event-desc {
+        display: none;
+    }
+
+    .close-icon-container {
+        display: block;
+        text-align: right;
+    }
 }

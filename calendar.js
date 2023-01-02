@@ -129,6 +129,15 @@ function fillInEvents() {
             const eventFlyOut = document.createElement("div");
             eventFlyOut.classList.add("event-fly-out");
 
+            const closeIconContainter = document.createElement("div");
+            closeIconContainter.classList.add("close-icon-container");
+            const closeIcon = document.createElement("i");
+            closeIcon.classList.add("close-icon", "fa-regular", "fa-circle-xmark", "fa-lg");
+            closeIconContainter.append(closeIcon);
+            closeIcon.addEventListener("click", () => {
+                eventFlyOut.style.display = "none";
+            });
+
             const eventImg = document.createElement("img");
             eventImg.classList.add("event-img");
             eventImg.src = event.imageSource;
@@ -153,7 +162,7 @@ function fillInEvents() {
             eventContainer.append(eventTimeShort, eventName, eventFlyOut);
             eventTimeAndLink.append(eventTimeFull, eventRegLink);
             eventRegLink.append("Sign Up", externalTabIcon);
-            eventFlyOut.append(eventImg, eventNameFlyOut, eventTimeAndLink, eventDesc);
+            eventFlyOut.append(closeIconContainter, eventImg, eventNameFlyOut, eventTimeAndLink, eventDesc);
         }
     }
 }
