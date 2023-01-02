@@ -3,71 +3,258 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - David Dunlop Observatory Defenders</title>
+    <title>About Us - David Dunlop Observatory Defenders</title>
     <script src="https://kit.fontawesome.com/15cf252415.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="navigation.css">
     <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="footer.css">
+
 </head>
 
 <body>
+
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="navbar-nav mr-auto">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="calendar.html" class="nav-item nav-link">Calendar</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="programs.html" id="navbarDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Programs
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item dropdown-1 dropdown-1-1" href="programs.html">Speaker Nights</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item dropdown-1 dropdown-1-2" href="programs.html">Family Nights</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item dropdown-1 dropdown-1-3" href="programs.html">How to Use Your
+                                    Telescope</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item dropdown-1 dropdown-1-4" href="programs.html">Workshops</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item dropdown-1 dropdown-1-5" href="programs.html">Up in the Sky</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="about.html" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            About Us
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li>
+                                <a class="dropdown-item dropdown-2 dropdown-2-1" href="about.html">Who Are We?</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item dropdown-2 dropdown-2-2" href="about.html">History of the
+                                    DDO</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item dropdown-2 dropdown-2-3" href="about.html">Activism</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item dropdown-2 dropdown-2-4" href="about.html">Looking to the
+                                    Future</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <a href="visit.html" class="nav-item nav-link">Visit</a>
+                    <a class="nav-item nav-link" href="https://www.facebook.com/groups/saveddo/" target="_blank"
+                        rel="noopener noreferrer"><i class="fa-brands fa-square-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <div class="header-and-image-container">
-        <img id="header-image-about" class="header-image"
-            src="https://live.staticflickr.com/65535/49254159077_a83227aec7_k.jpg" width="2048" height="1365"
-            alt="EAG_9350r">
+        <img id="header-image-about" class="header-image" img img
+            src="https://live.staticflickr.com/65535/52138379526_d207241775_k.jpg" width="2048" height="1367"
+            alt="EAR_1146r">
         <div id="logo-container">
             <a href="index.html"><img id="logo" src="images/logo.png" alt=""></a>
         </div>
-        <nav role="navigation">
-            <ul id="navbar">
-                <li class="nav-item"><a class="nav-link" href="calendar.html">Calendar</a></li>
-                <li class="nav-item">
-                    <a class="nav-link" href="programs.html">Programs<i class="fa-solid fa-angle-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-item"><a class="dropdown-item-link" href="#">Speaker Nights</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item-link" href="#">Family Nights</a></li>
-                        <li class="dropdown-item">
-                            <a class="dropdown-item-link" href="#">How to Use Your Telescope</a>
-                        </li>
-                        <li class="dropdown-item"><a class="dropdown-item-link" href="#">Up in the Sky</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item-link" href="#">Group Tours</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                <li class="nav-item">
-                    <a class="nav-link" href="aboutus.html">About<i class="fa-solid fa-angle-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-item"><a class="dropdown-item-link" href="#">About the DDOD</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item-link" href="#">History of the DDO</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item-link" href="#">Activism</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="visit.html">Visit</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                <li class="nav-item">
-                    <a class="nav-link" href="resources.html">Resources<i class="fa-solid fa-angle-down"></i></a>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-item"><a class="dropdown-item-link" href="#">Star Chart</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item-link" href="#">Telescopes</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item-link" href="#">Cameras and Lenses</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="donate.html">Donate</a></li>
-                <li class="nav-item">
-                    <a class="nav-link social-media-icon" href="https://www.facebook.com/groups/saveddo/"
-                        target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-facebook fa-xs"></i></a>
-                    <a class="nav-link social-media-icon" href="https://www.facebook.com/groups/saveddo/"
-                        target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram fa-xs"></i></a>
-                </li>
-            </ul>
-        </nav>
         <div id="h1-container">
-            <h1>About</h1>
+            <h1>About Us</h1>
         </div>
     </div>
 
+    <main class="container my-3 my-md-5">
+        <div class="row justify-content-center">
+
+            <ul id="page-menu" class="col-md-3">
+                <li class="page-menu-item dropdown-2-1 active">Who Are We?</li>
+                <li class="page-menu-item dropdown-2-2">History of the DDO</li>
+                <li class="page-menu-item dropdown-2-3">Activism</li>
+                <li class="page-menu-item dropdown-2-4">Looking to the Future</li>
+            </ul>
+
+            <div class="col-md-7">
+                <div class="content-option dropdown-2-1 active">
+                    <h2>Who Are We?</h2>
+                    <p>The DDO Defenders is a non-profit volunteer organization, deeply committed to preserving the
+                        David Dunlap Observatory
+                        (DDO), surrounding lands and the Dunlap legacy. Our mandate is to endeavor that the campus
+                        continues to operate as a
+                        world-class astronomical and astrophysical research facility and a center of excellence in
+                        public outreach, education
+                        and experiential learning regarding all aspects of science and the natural world.
+                    </p>
+                    <div id="carouselExampleIndicators" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                                aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                                aria-label="Slide 5"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://live.staticflickr.com/65535/47979300278_21aa679e26_c.jpg"
+                                    class="d-block w-100" alt="EAB_3966r">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://live.staticflickr.com/7893/40640770093_4677bff32a_c.jpg"
+                                    class="d-block w-100" alt="EAA_5269r">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://live.staticflickr.com/65535/47979472857_679d84a251_c.jpg"
+                                    class="d-block w-100" alt="EAB_4074r">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://live.staticflickr.com/65535/48971113371_6973b1b44d_c.jpg"
+                                    class="d-block w-100" alt="EAF_6483r">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://live.staticflickr.com/65535/49253413253_926fdf7937_c.jpg"
+                                    class="d-block w-100" alt="EAG_9156r">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="content-option dropdown-2-2">
+                    <h2>History of the DDO</h2>
+                    <p>The David Dunlap Observatory lies nestled in the heart of Richmond Hill, Ontario, a city of
+                        200,000 just north of
+                        Canada's largest city, Toronto. In 2007, the 190-acre oasis of mature forests, pastures and
+                        springs was home to two
+                        distinct deer herds and an abundance of other wildlife, including a coyote pack, foxes, voles,
+                        rabbits, honey bees, many
+                        species of butterflies, and birds including hawks, owls, doves, crows and songbirds. The
+                        property represented the last
+                        and largest urban open green space in southern Richmond Hill.
+                    </p>
+                    <p>Originally deeded to the University of Toronto by the philanthropist Jessie Donalda Dunlap in
+                        memory of her husband
+                        David, the Dunlap Observatory opened on May 31st, 1935. Its magnificent 74-inch telescope was
+                        the second largest in the
+                        world at that time and has been used through seven decades to conduct much groundbreaking
+                        research, including proving
+                        the existence of the first known black hole, Cygnus X-1.
+                    </p>
+                    <img class="img-fluid" src="https://live.staticflickr.com/65535/49148279772_d578c7508a_c.jpg"
+                        alt="EAG_4249r">
+                </div>
+
+                <div class="content-option dropdown-2-3">
+                    <h2>Activism</h2>
+                    <p>In 2007, the University of Toronto wrested control of the land from Jessie Dunlap's heirs through
+                        a protracted legal
+                        case spanning 4 years. They then broke the public covenant that the land would remain a park and
+                        a research and outreach
+                        centre in perpetuity by selling the property to a developer intent on replacing most of the
+                        greenspace with many
+                        hundreds of houses.
+                    </p>
+                    <p>
+                        The DDO Defenders have been working hard since 2007 to represent the public and inform all
+                        levels of government about
+                        what would and now has been lost as the developer is allowed to proceed.
+                    </p>
+                    <p>On April 12th, 2012, after six long and anxiety-ridden months of Ontario Municipal Board (OMB)
+                        mandated mediation
+                        following a four year hard-fought and very public battle, an agreement was reached between the
+                        mediation parties to the
+                        David Dunlap Observatory Lands OMB case.
+                    </p>
+                    <p>
+                        Minutes of Settlement were drawn up for signing by all parties to the mediation — the landowner
+                        Corsica Development Inc.
+                        (a subsidiary of Metrus Developments Inc., now known as ‘DG Group’), the City of Richmond Hill,
+                        the Region of York, the
+                        Toronto and Area Conservation Authority (TRCA), and the David Dunlap Observatory Defenders (DDO
+                        Defenders) Inc.. This
+                        historic document was ratified by Richmond Hill City Council on Thursday, April 12th. All
+                        mediation parties had been
+                        sworn to absolute secrecy under a strict gag order until Council signed off on the agreement.
+                        Since, the silence has
+                        allowed to be broken and the details of the settlement agreement can be made public.
+                    </p>
+                    <p>
+                        To read the public statement by DDOD made on April 12th, 2012: <a
+                            href="images/public_statement.pdf" target="_blank" rel="noopener noreferrer">(link)</a>
+                    </p>
+                </div>
+
+                <div class="content-option dropdown-2-4">
+                    <h2>Looking to the Future</h2>
+                    <p>The DDO Defenders are now honored to be providing programming at the David Dunlap Observatory in
+                        partnership with the
+                        City of Richmond Hill. We look towards a future of excellent public outreach, education and
+                        experiential learning
+                        regarding all aspects of science and the natural world, especially astronomy. We aim to preserve
+                        the DDO as a center of
+                        knowledge and curiosity for many years to come. We continue to aspire to maintain the
+                        world-class status of the David
+                        Dunlap Observatory, and have aspirations to return astronomical and astrophysical research to
+                        the facility.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="navigation.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
