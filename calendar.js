@@ -15,6 +15,14 @@ prevMonthArrow.addEventListener("click", () => {
         monthDisplayed = getPrevMonth(monthDisplayed);
         if (monthDisplayed === 11) { yearDisplayed--; }
         populateCalendar(yearDisplayed, monthDisplayed);
+
+        const matchMedia = window.matchMedia("(max-width: 991px)")
+        if (matchMedia.matches) {
+            const mobileFlyOuts = document.querySelectorAll(".mobile-fly-out");
+            for (let flyOut of mobileFlyOuts) {
+                flyOut.classList.remove("active");
+            }
+        }
     }
 });
 
@@ -23,6 +31,14 @@ nextMonthArrow.addEventListener("click", () => {
         monthDisplayed = getNextMonth(monthDisplayed);
         if (monthDisplayed === 0) { yearDisplayed++; }
         populateCalendar(yearDisplayed, monthDisplayed);
+
+        const matchMedia = window.matchMedia("(max-width: 991px)")
+        if (matchMedia.matches) {
+            const mobileFlyOuts = document.querySelectorAll(".mobile-fly-out");
+            for (let flyOut of mobileFlyOuts) {
+                flyOut.classList.remove("active");
+            }
+        }
     }
 });
 
@@ -71,16 +87,11 @@ function getDateContainer(year, month, dayOfTheMonth) {
     const td = document.createElement("td");
     const dateContainer = document.createElement("div");
     const dateHeading = document.createElement("div");
-    const dateContent = document.createElement("div");
-
     td.append(dateContainer);
-    dateContainer.append(dateHeading, dateContent);
+    dateContainer.append(dateHeading);
 
-    dateContainer.classList.add("date-container");
+    dateContainer.classList.add("date-container", dateToCreate.toDateString().split(' ').join('-'));
     dateHeading.classList.add("date-heading");
-    dateContent.classList.add("date-content");
-
-    dateContainer.id = dateToCreate.toDateString().split(' ').join('-');
     dateHeading.innerText = dayOfTheMonth;
 
     if (todaysDate.getTime() > dateToCreate.getTime()) {
@@ -92,14 +103,26 @@ function getDateContainer(year, month, dayOfTheMonth) {
 }
 
 function fillInEvents() {
+    // Mobile version
+    const mobileContainter = document.querySelector(".display-event-mobile");
+
+    // Remove all children from mobile container to avoid duplicates
+    while (mobileContainter.firstChild) {
+        mobileContainter.removeChild(mobileContainter.lastChild);
+    }
     for (let event of calendarEvents) {
         const eventId = event.date.toDateString().split(' ').join('-');
-        const dateContainer = document.querySelector(`#${eventId}`);
+        const dateContainer = document.querySelector(`.${eventId}`);
+
+
         if (dateContainer) {
-            const dateContent = dateContainer.children[1];
 
             const eventContainer = document.createElement("div");
             eventContainer.classList.add("event-container");
+
+            const mobileDot = document.createElement("div");
+            mobileDot.classList.add("mobile-dot");
+            mobileDot.append(".")
 
             const eventTimeShort = document.createElement("span");
             eventTimeShort.classList.add("event-time-short");
@@ -127,19 +150,10 @@ function fillInEvents() {
             }
 
             const eventFlyOut = document.createElement("div");
-            eventFlyOut.classList.add("event-fly-out");
-
-            const closeIconContainter = document.createElement("div");
-            closeIconContainter.classList.add("close-icon-container");
-            const closeIcon = document.createElement("i");
-            closeIcon.classList.add("close-icon", "fa-regular", "fa-circle-xmark", "fa-lg");
-            closeIconContainter.append(closeIcon);
-            closeIcon.addEventListener("click", () => {
-                eventFlyOut.style.display = "none";
-            });
+            eventFlyOut.classList.add("event-fly-out", eventId);
 
             const eventImg = document.createElement("img");
-            eventImg.classList.add("event-img");
+            eventImg.classList.add("event-img", "img-fluid");
             eventImg.src = event.imageSource;
 
             const eventTimeAndLink = document.createElement("div");
@@ -158,11 +172,34 @@ function fillInEvents() {
             eventDesc.classList.add("event-desc");
             eventDesc.append(event.desc);
 
-            dateContent.append(eventContainer);
-            eventContainer.append(eventTimeShort, eventName, eventFlyOut);
+
+            dateContainer.append(eventContainer);
+            eventContainer.append(mobileDot, eventTimeShort, eventName, eventFlyOut);
             eventTimeAndLink.append(eventTimeFull, eventRegLink);
             eventRegLink.append("Sign Up", externalTabIcon);
-            eventFlyOut.append(closeIconContainter, eventImg, eventNameFlyOut, eventTimeAndLink, eventDesc);
+            eventFlyOut.append(eventImg, eventNameFlyOut, eventTimeAndLink, eventDesc);
+
+
+            const mobileFlyOut = eventFlyOut.cloneNode(true);
+            mobileFlyOut.classList.add("mobile-fly-out");
+            mobileContainter.append(mobileFlyOut);
+
+
+            const matchMedia = window.matchMedia("(max-width: 991px)")
+            dateContainer.addEventListener("click", () => {
+                if (matchMedia.matches) {
+                    const mobileFlyOuts = document.querySelectorAll(".mobile-fly-out");
+                    for (let flyOut of mobileFlyOuts) {
+                        flyOut.classList.remove("active");
+                    }
+                    const event = dateContainer.classList[1];
+                    const allMatchingEvents = document.querySelectorAll(`.mobile-fly-out.${event}`);
+                    for (let matchingEvent of allMatchingEvents) {
+                        matchingEvent.classList.add("active");
+                    }
+                }
+            });
+
         }
     }
 }

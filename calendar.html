@@ -103,18 +103,19 @@
 
 
     <main class="container my-3 my-md-5">
-        <div id="calendar-header">
-            <div id="calendar-month"></div>
-            <div id="calendar-arrows">
-                <div class="calendar-arrow" id="calendar-left-arrow">
-                    <i class="fa-solid fa-arrow-left"></i>
-                </div>
-                <div class="calendar-arrow" id="calendar-right-arrow">
-                    <i class="fa-solid fa-arrow-right"></i>
+        <div class="container">
+            <!-- TODO Change to margin bottom. Want to be about 40px -->
+            <div class="row my-2 my-md-4 justify-content-between">
+                <div class="col-auto" id="calendar-month"></div>
+                <div class="col-auto" id="calendar-arrows">
+                    <div class="calendar-arrow" id="calendar-left-arrow">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </div>
+                    <div class="calendar-arrow" id="calendar-right-arrow">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div id="calendar-container-table">
             <table>
                 <thead>
                     <tr>
@@ -130,7 +131,7 @@
                 <tbody>
                 </tbody>
             </table>
-
+            <div class="display-event-mobile"></div>
         </div>
     </main>
 

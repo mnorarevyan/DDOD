@@ -5,12 +5,6 @@ table {
     border-spacing: 5px;
 }
 
-#calendar-header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
-}
-
 #calendar-month {
     font-family: 'Poppins', sans-serif;
     font-size: 26px;
@@ -69,9 +63,9 @@ td {
     color: #ccbaa3;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    font-size: 18px;
-    text-align: right;
-    padding: 10px 15px;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 4px;
 }
 
 .past-date {
@@ -80,60 +74,6 @@ td {
 
 .past-date .date-heading {
     color: var(--orange-1);
-}
-
-.event-container {
-    position: relative;
-    padding: 0 12px 2px;
-}
-
-.event-container:hover .event-name {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-.event-container:hover .event-fly-out {
-    display: initial;
-}
-
-.event-fly-out {
-    display: none;
-    position: absolute;
-    width: 150%;
-    height: 350px;
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    border-radius: 5px;
-    /* left: calc(100% + 5px); */
-    left: -25%;
-    bottom: 100%;
-    /* top: -10px; */
-}
-
-.event-time-short {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    padding-right: 5px;
-
-}
-
-.event-name {
-    color: black;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-}
-
-.event-fly-out {
-    padding: 12px;
-    overflow: scroll;
-}
-
-.event-img {
-    width: 100%;
-    height: auto;
 }
 
 .event-reg-link {
@@ -153,10 +93,6 @@ td {
     color: var(--colour-blue);
 }
 
-.event-name-fly-out:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
 
 .event-desc {
     font-family: 'Poppins', sans-serif;
@@ -164,59 +100,95 @@ td {
     font-weight: 300;
 }
 
+.event-container {
+    text-align: center;
+}
 
-.close-icon-container {
+.mobile-dot {
+    line-height: 0.1em;
+    color: var(--colour-blue);
+    font-weight: 900;
+}
+
+.event-fly-out {
     display: none;
 }
 
-@media (max-width: 992px) {
+.mobile-fly-out.active {
+    display: initial;
+}
+
+@media (max-width: 991px) {
+
+    .event-time-short,
     .event-name {
         display: none;
     }
 
-    .event-time-short {
-        font-size: 12px;
-        font-weight: 600;
-        padding-right: 5px;
-        text-decoration: underline;
-        text-align: center;
-    }
+}
 
-    .event-container {
-        text-align: center;
-    }
+@media (min-width: 992px) {
 
-    .event-fly-out {
-
-        width: 450%;
-        left: -200%;
-        height: auto;
-    }
-
-    .event-name-fly-out {
-        font-size: 14px;
-    }
-
-    .event-desc {
-        font-size: 10px;
-    }
-
-    .event-time-full {
-        font-size: 10px;
-        display: inline;
-    }
-
-    .event-reg-link {
-        font-size: 8px;
-        display: inline;
-    }
-
-    .event-desc {
+    .mobile-dot,
+    .display-event-mobile {
         display: none;
     }
 
-    .close-icon-container {
-        display: block;
+    .date-heading {
+        font-size: 18px;
         text-align: right;
+        padding: 10px 15px;
+    }
+
+    .event-container {
+        position: relative;
+        padding: 0 12px 2px;
+        text-align: left;
+    }
+
+    .event-time-short {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        padding-right: 5px;
+
+    }
+
+    .event-name {
+        color: black;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .event-fly-out {
+        display: none;
+        position: absolute;
+        width: 150%;
+        height: 350px;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+        /* left: calc(100% + 5px); */
+        left: -25%;
+        bottom: 100%;
+        /* top: -10px; */
+        padding: 12px;
+        overflow: scroll;
+    }
+
+    .event-container:hover .event-name {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .event-container:hover .event-fly-out {
+        display: initial;
+    }
+
+    .event-name-fly-out:hover {
+        text-decoration: underline;
+        cursor: pointer;
     }
 }
