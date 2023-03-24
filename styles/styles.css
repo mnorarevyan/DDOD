@@ -93,19 +93,6 @@
     --orange-4: #ffa94d;
 }
 
-html,
-body,
-span,
-h1,
-h2,
-p,
-ul,
-tr,
-td {
-    padding: 0;
-    margin: 0;
-}
-
 a {
     text-decoration: none;
 }
@@ -117,10 +104,6 @@ ul {
 .content-option p,
 .faq p {
     margin: 10px 0;
-}
-
-h2 {
-    margin: 4px 0;
 }
 
 .h3,
