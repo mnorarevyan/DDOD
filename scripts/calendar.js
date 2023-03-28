@@ -44,7 +44,7 @@ nextMonthArrow.addEventListener("click", () => {
 
 function populateCalendar(year, month) {
     const monthObject = document.querySelector("#calendar-month");
-    monthObject.innerText = `${monthNumToStr(month)}  ${year}`;
+    monthObject.innerText = `${getMonth(new Date(year, month))}  ${year}`;
     const tableBody = document.querySelector("tbody");
     tableBody.innerHTML = "";
     const firstRow = document.createElement("tr");
@@ -84,15 +84,11 @@ function getDateContainer(year, month, dayOfTheMonth) {
     const todaysDate = new Date(today.getFullYear(), today.getMonth(), today.getDate());
     const dateToCreate = new Date(year, month, dayOfTheMonth);
 
-    const td = document.createElement("td");
-    const dateContainer = document.createElement("div");
-    const dateHeading = document.createElement("div");
-    td.append(dateContainer);
-    dateContainer.append(dateHeading);
-
-    dateContainer.classList.add("date-container", dateToCreate.toDateString().split(' ').join('-'));
-    dateHeading.classList.add("date-heading");
-    dateHeading.innerText = dayOfTheMonth;
+    const template = document.querySelector('#template-date-container');
+    const clone = template.content.cloneNode(true);
+    const td = clone.querySelector("td");
+    clone.querySelector(".date-container").classList.add(dateToCreate.toDateString().split(' ').join('-'));
+    clone.querySelector(".date-heading").innerText = dayOfTheMonth;
 
     if (todaysDate.getTime() > dateToCreate.getTime()) {
         td.classList.add("past-date");
@@ -114,76 +110,36 @@ function fillInEvents() {
         const eventId = event.date.toDateString().split(' ').join('-');
         const dateContainer = document.querySelector(`.${eventId}`);
 
-
         if (dateContainer) {
 
-            const eventContainer = document.createElement("div");
-            eventContainer.classList.add("event-container");
+            if ('content' in document.createElement('template')) {
 
-            const mobileDot = document.createElement("div");
-            mobileDot.classList.add("mobile-dot");
-            mobileDot.append(".")
+                const template = document.querySelector('#template-event-container');
+                const clone = template.content.cloneNode(true);
 
-            const eventTimeShort = document.createElement("span");
-            eventTimeShort.classList.add("event-time-short");
-            eventTimeShort.append(event.timeShort);
+                clone.querySelector(".time-short").append(event.timeShort);
+                clone.querySelector(".time-full").append(event.timeFull);
+                clone.querySelector(".registration-link").href = event.regLink;
+                clone.querySelector(".fly-out-img").src = event.imageSource;
+                clone.querySelector(".fly-out-desc").append(event.desc);
 
-            const eventTimeFull = document.createElement("mark");
-            eventTimeFull.classList.add("event-time-full");
-            eventTimeFull.append(event.timeFull);
+                for (let name of clone.querySelectorAll(".event-name")) {
+                    name.append(event.name);
+                    name.classList.add(event.class);
+                }
+                dateContainer.append(clone);
+            }
 
-            const eventName = document.createElement("a");
-            eventName.classList.add("event-name", "link-to-programs", event.class);
-            eventName.append(event.name);
-            eventName.href = "programs.html";
-
-            const eventNameFlyOut = document.createElement("a");
-            eventNameFlyOut.classList.add("event-name-fly-out", "link-to-programs", event.class);
-            eventNameFlyOut.append(event.name);
-            eventNameFlyOut.href = "programs.html";
-
-            const allCalendarLinks = document.querySelectorAll(".link-to-programs");
+            const allCalendarLinks = document.querySelectorAll(".event-name");
             for (let link of allCalendarLinks) {
                 link.addEventListener("click", () => {
-                    sessionStorage.setItem("dropdown-1", link.classList[2]);
+                    sessionStorage.setItem("dropdown-1", link.classList[link.classList.length - 1]);
                 });
             }
 
-            const eventFlyOut = document.createElement("div");
-            eventFlyOut.classList.add("event-fly-out", eventId);
-
-            const eventImg = document.createElement("img");
-            eventImg.classList.add("event-img", "img-fluid");
-            eventImg.src = event.imageSource;
-
-            const eventTimeAndLink = document.createElement("div");
-            eventTimeAndLink.classList.add("event-time-and-link");
-
-            const eventRegLink = document.createElement("a");
-            eventRegLink.classList.add("event-reg-link", "btn", "btn-primary", "btn-sm");
-            eventRegLink.href = event.regLink;
-            eventRegLink.target = "_blank";
-            eventRegLink.rel = "noopener noreferrer";
-
-            const externalTabIcon = document.createElement("i");
-            externalTabIcon.classList.add("fa-solid", "fa-arrow-up-right-from-square");
-
-            const eventDesc = document.createElement("p");
-            eventDesc.classList.add("event-desc");
-            eventDesc.append(event.desc);
-
-
-            dateContainer.append(eventContainer);
-            eventContainer.append(mobileDot, eventTimeShort, eventName, eventFlyOut);
-            eventTimeAndLink.append(eventTimeFull, eventRegLink);
-            eventRegLink.append("Sign Up", externalTabIcon);
-            eventFlyOut.append(eventImg, eventNameFlyOut, eventTimeAndLink, eventDesc);
-
-
-            const mobileFlyOut = eventFlyOut.cloneNode(true);
+            const mobileFlyOut = document.querySelector(".fly-out").cloneNode(true);
             mobileFlyOut.classList.add("mobile-fly-out");
             mobileContainter.append(mobileFlyOut);
-
 
             const matchMedia = window.matchMedia("(max-width: 991px)")
             dateContainer.addEventListener("click", () => {
@@ -219,56 +175,5 @@ function updateArrowColors() {
     } else {
         nextMonthArrow.classList.remove("calendar-arrow-valid");
         nextMonthArrow.classList.add("calendar-arrow-invalid");
-    }
-}
-
-function getValidMonths(startMonth, numMonthsToDisplay) {
-    const validMonths = [];
-    let monthToAppend = startMonth;
-    for (let i = 0; i < numMonthsToDisplay; i++) {
-        validMonths.push(monthToAppend);
-        monthToAppend = getNextMonth(monthToAppend);
-    }
-    return validMonths;
-}
-
-function getDayOfWeek(date) {
-    return (date.getDay() === 0 ? 6 : date.getDay() - 1);
-}
-
-function getPrevMonth(monthNum) {
-    return (monthNum === 0 ? 11 : monthNum - 1);
-}
-
-function getNextMonth(monthNum) {
-    return (monthNum === 11 ? 0 : monthNum + 1);
-}
-
-function monthNumToStr(monthNum) {
-    switch (monthNum) {
-        case 0:
-            return "January";
-        case 1:
-            return "February";
-        case 2:
-            return "March";
-        case 3:
-            return "April";
-        case 4:
-            return "May";
-        case 5:
-            return "June";
-        case 6:
-            return "July";
-        case 7:
-            return "August";
-        case 8:
-            return "September";
-        case 9:
-            return "October";
-        case 10:
-            return "November";
-        case 11:
-            return "December";
     }
 }

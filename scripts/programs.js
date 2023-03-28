@@ -17,11 +17,3 @@ if ('content' in document.createElement('template')) {
         tbody.append(clone);
     }
 }
-
-function getDay(date) {
-    return new Intl.DateTimeFormat("en-US", { weekday: "long" }).format(date);
-}
-
-function getMonth(date) {
-    return new Intl.DateTimeFormat("en-US", { month: "long" }).format(date);
-}

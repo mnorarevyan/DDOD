@@ -76,7 +76,7 @@ td {
     color: var(--orange-1);
 }
 
-.event-reg-link {
+.registration-link {
     /* background-color: var(--colour-blue);
     font-family: 'Poppins', sans-serif; */
     margin-left: 4px;
@@ -86,7 +86,7 @@ td {
     margin-left: 4px;
 }
 
-.event-name-fly-out {
+.fly-out-event-name {
     font-family: 'Poppins', sans-serif;
     font-size: 22px;
     font-weight: 300;
@@ -94,7 +94,7 @@ td {
 }
 
 
-.event-desc {
+.fly-out-desc {
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     font-weight: 300;
@@ -110,7 +110,7 @@ td {
     font-weight: 900;
 }
 
-.event-fly-out {
+.fly-out {
     display: none;
 }
 
@@ -146,7 +146,7 @@ td {
         text-align: left;
     }
 
-    .event-time-short {
+    .time-short {
         font-family: 'Montserrat', sans-serif;
         font-size: 12px;
         font-weight: 600;
@@ -161,7 +161,7 @@ td {
         font-weight: 400;
     }
 
-    .event-fly-out {
+    .fly-out {
         display: none;
         position: absolute;
         width: 150%;
@@ -183,11 +183,11 @@ td {
         cursor: pointer;
     }
 
-    .event-container:hover .event-fly-out {
+    .event-container:hover .fly-out {
         display: initial;
     }
 
-    .event-name-fly-out:hover {
+    .fly-out-event-name:hover {
         text-decoration: underline;
         cursor: pointer;
     }

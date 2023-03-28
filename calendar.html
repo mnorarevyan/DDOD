@@ -156,7 +156,34 @@
         </div>
     </footer>
 
+    <template id="template-date-container">
+        <td>
+            <div class="date-container">
+                <div class="date-heading"></div>
+            </div>
+        </td>
+    </template>
+
+    <template id="template-event-container">
+        <div class="event-container">
+            <div class="mobile-dot">.</div>
+            <span class="time-short"></span>
+            <a href="programs.html" class="event-name"></a>
+            <div class="fly-out">
+                <img class="img-fluid fly-out-img" src="" alt="">
+                <a href="programs.html" class="event-name fly-out-event-name"></a>
+                <div class="time-full"></div>
+                <a class="registration-link btn btn-primary btn-sm" href="" target="_blank" rel="noopener noreferrer">
+                    Sign Up
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                <p class="fly-out-desc"></p>
+            </div>
+        </div>
+    </template>
+
     <script src="scripts/calendar-events.js"></script>
+    <script src="scripts/calendar-helpers.js"></script>
     <script src="scripts/calendar.js"></script>
     <script src="scripts/navigation.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
